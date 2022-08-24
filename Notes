@@ -146,10 +146,56 @@ class - 4
 
 
 
+Class 6
+ --  recap --
+    Data table -
+    we use data table to achieve data driven testing
+
+    2 types of data table -
+    with headers - list of maps
+    without headers - list
+
+    excel file - spreadsheets
+
+Homework - modify the details of the employee after adding it in the HRMS
 
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
+                <configuration>
+                //we use inlcludes tag to run our runner classes
+                //** means src folder/* means runner package and then file name
+                    <includes>
+                        <include>**/*RunnerClass.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
 
 
+Class - 7
+
+-- recap --
+   --screenshots and reports
+   -- for screenshots in cucumber it accepts array of byte
+   -- we are passing the path of saving screenshots from constants class
+   -- Filename - We are passing the filename from
+   -- we use gettimestamp method to get the time in specific format so that we can add it in the name of screenshot
+
+   -- generating a report that can have a screenshot in it
+   -- we have to add a plugin - in pom.xml
+
+Rerun plugin - we use this plugin in runner class to capture the details of failed
+test cases during execution and then we use failed runner class to execute only failed
+test cases.
+
+
+To run the code from cmd/terminal -
+
+mvn clean = to clean the project
+mvn test = to execute the scripts
+mvn clean verify -Dcucumber.filter.tags="@tagname" to override the tag from cmd
 
 
 

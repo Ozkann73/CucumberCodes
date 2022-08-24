@@ -9,8 +9,5 @@
         <module name="CucumberBatch13" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="CucumberBatch13" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
